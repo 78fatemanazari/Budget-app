@@ -1,3 +1,14 @@
+<nav>
+    <ul>
+      <li>
+          <svg class="navBtn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </li>
+      <li><p>Add a new category</p>
+      <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out navBtn"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+      </li>
+    </ul>
+  </nav>
 <%= form_with(model: category) do |form| %>
   <% if category.errors.any? %>
     <div style="color: red">
@@ -11,17 +22,17 @@
     </div>
   <% end %>
 
-  <div>
+  <div class="field form-group ms-3 me-3">
     <%= form.label :Name, style: "display: block" %>
-    <%= form.text_field :Name %>
+    <%= form.text_field :Name, class:"form-control" %>
   </div>
 
-  <div>
+  <div class="field form-group mt-5 ms-3 me-3">
     <%= form.label :Icon, style: "display: block" %>
-    <%= form.text_field :Icon %>
+    <%= form.text_field :Icon, class:"form-control" %>
   </div>
 
-  <div>
-    <%= form.submit %>
+  <div class="actions ms-3 me-3">
+    <%= form.submit class:"sb-button" %>
   </div>
 <% end %>
