@@ -68,3 +68,37 @@ html {
   background-color: #fff;
   border: 1px solid #434b54;
 }
+
+.categories {
+  background-color: whitesmoke;
+  min-height: 100vh;
+  color: white;
+}
+
+nav {
+  box-shadow: 0 0 0.3rem lightgrey;
+}
+
+nav ul {
+  color: white;
+  background-color: #3778c2;
+  list-style: none;
+  font-size: 1.3rem;
+  width: 100%;
+  padding: 0.6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.button{
+  background-color: #5fb523;
+  color: #fff;
+}
+
+.button:hover{
+  background-color: #fff;
+  color: #5fb523;
+  border: 1px solid #5fb523;
+}
