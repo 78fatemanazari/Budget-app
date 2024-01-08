@@ -1,0 +1,26 @@
+<section class='categories'>
+  <nav>
+    <ul>
+      <li>
+          <svg class="navBtn" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-menu"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+      </li>
+      <li><p>CATEGORIES</p>
+      <li>
+          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-log-out navBtn"><path d="M9 21H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h4"/><polyline points="16 17 21 12 16 7"/><line x1="21" x2="9" y1="12" y2="12"/></svg>
+      </li>
+    </ul>
+  </nav>
+<p style="color: green"><%= notice %></p>
+<div class="card w-85 mb-3 text-dark m-5">
+  <div class="card-body">
+  <% @categories.each do |category| %>
+    <%= render category %>
+    <p>
+      <%= link_to "Show this category", category, class:"btn button" %>
+    </p>
+  <% end %>
+  </div>
+</div>
+</section>
+
+<%= link_to "Add new category", new_category_path, class:"btn d-grid m-5 button" %>
