@@ -138,3 +138,8 @@ nav ul {
   background-color: #fff;
   border: 1px solid #434b54;
 }
+
+.category{
+  background-color: #3778c2;
+  min-height: 100vh;
+}
